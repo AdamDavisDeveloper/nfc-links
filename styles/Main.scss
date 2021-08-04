@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #3A4960;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+#Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 28vh;
+    margin-bottom: 2rem;
+    h2 {
+        color: white;
+        font-size: 1.4rem;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        padding-left: .8rem;
+    }
+    .image {
+        background: white;
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#Cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    a {
+        width: 100%;
+        text-decoration: none;
+    }
+    .card-link {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 4.5rem;
+        margin: auto;
+        text-align: center;
+        background: #8385A3;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+        border-radius: .3rem;
+        &:hover {
+            background: #787a9b;
+            box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.25);
+        }
+        h1 {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+        }
+    }
+    // Sprites
+    .kirby {
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            transform: translateY(-26.84px);
+        }
+    }
+    .junimo {
+        img {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            width: 30px;
+            transform: translateY(-23.84px);
+        }
+    }
+    .boo {
+        img {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            width: 25px;
+            transform: translateY(-25.5px);
+        }
+    }
+}
+
+#Footer {
+    position: absolute;
+    bottom: 0;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    p {
+        color: white;
+        font-weight: 100;
+        letter-spacing: 0.1em;
+    }
+}
+
+.non-mobile-display {
+    display: none;
+    background: #3A4960;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 3.6rem;
+        color: white;
+        font-weight: 100;
+        letter-spacing: 0.1em;
+        width: 70%;
+    }
+}
+
+@media (max-height: 667px) {
+    body {
+        height: 110vh;
+    }
+    #Cards {
+        height: 70vh;
+        margin-bottom: 4rem;
+    }
+    #Footer {
+        position: static;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-height: 568px) {
+    body {
+        height: 120vh;
+    }
+    #Header {
+        height: 35vh;
+    }
+    #Cards {
+        height: 80vh;
+        margin-bottom: 4rem;
+    }
+    #Footer {
+        position: static;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (min-width: 620px) {
+    .non-mobile-display {
+        display: flex;
+    }
+    .main-content {
+        display: none;
+    }
+}
